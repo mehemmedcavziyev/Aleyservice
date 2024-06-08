@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aley service</title>
+    <style>
+        #basliq {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+        } 
+        #axtaris_yeri {
+            width: 54%;
+            height: 31%;
+        }
+        #body {
+        background-image:url('/IMG_0896.jpg');
+        }
+       #searchInput {
+            width: 93%;
+        }
+    </style>
+</head>
+<body id="body">
+    <div>
+        <form id="form">
+            <input id="searchInput" type="text" placeholder="Url daxil et">
+            <button id="searchButton" type="button">Ara</button>
+        </form>
+    </div>
+    <center id="basliq"><h1><b><i>Aley</i></b></h1></center>
+    <center><a href="/haqqimizda.html">Haqqımızda və Biznes</a></center>  
+    <center style="display: block;">
+        <input id="axtaris_yeri" type="search" placeholder=" Url daxil et ">  
+        <button id="axtar">axtar</button>
+    </center>
+    <center><h1><b><i>'EXE' proqramlar</i></b></h1></center>
+   
+    <a href="https://drive.google.com/file/d/17C_uIxts5Zr6HeZ6-EwyeJM8QUniQv-b/view?usp=drive_link"><center><h1><b><i>Bəhs  oyunu </i></b></h1></center></a></a>
+    <h1><b><i>Bəhs oyunu aparat və sizin oynadığınız sadə oyundur. Vaxt keçirmək üçün oynaya bilərsiz.</i></b></h1>
+    <a href="https://drive.google.com/file/d/1WxQ9DLF8KoL-WDkYmYzQw3yRLpUWRShC/view?usp=drive_link"><center><h1><i><b>Calculator </b></i></h1></center></a>
+    <h1><i><b>Kalkulyator dan istifadə zamanı bir az gözdəyin sonra isə soruşulan məlumatları daxil et.</b></i></h1>
+    <a href="https://drive.google.com/file/d/1vAEtPsr6PpuR4VPrx5iIwHUXD27GXtUY/view?usp=sharing"><center><h1><b><i>Faiz hesablama</i></b></h1></center></a>
+    <h1><b><i>Faiz hesablama proqramı sadə proqramdır.</i></b></h1>
+    <a href="https://drive.google.com/file/d/1lwvXUd0EYakAsAOZ0sUgho7SMLbecDEb/view?usp=sharing"><center><h1><i><b>Ilan oyunu</b></i></h1></center></a>
+    <h1><i><b>Oyunu yükləyin və açın. Açılan pəncərdə heç nə etməyin oyun avtamatik açılacaq. İrəli getsəz və sizə geriyə bassaz oyun bağlanacaq çünki ilan geriyə gedə bilməyəcək.</b></i></h1>
+    <a href="https://drive.google.com/file/d/1S4vkL-GO2BbMSLAhAVJ43ZOXakwKeECs/view?usp=sharing"><center><h1><i><b>Calculator 2</b></i></h1></center></a>
+    <h1><i><b>Calculator 2 7 əməldən ibarətdir. Digər calculator 4 əməldən ibarətdir.</b></i></h1>
+    <a href="https://drive.google.com/drive/folders/1rNXPpZBXTiG8Ebi753SA2ZqpyDP1YbXm?usp=sharing"><center><h1><b><i>Futbol kart oyunu </i></b></h1></center></a>
+    <h1><i><b>Kart oyunu içindəki şəkillərə görə siz oyunu qovluğun içində açmalısınız. Oyunu acandan sonra enter düyməsinə basaraq yeni kart aça bilərsiz.</b></i></h1>
+    <a href="https://drive.google.com/file/d/1ufsXfNfCA4Lwu0qEyx-egOZjQSonV8yN/view?usp=sharing"><center><h1><i><b> Browser</b></i></h1></center></a>
+    <h1><i><b>Bu browser i açın və bir az gözdəyin. Hər hansı texniki səbəbdən browser bir az gec açılır.</b></i></h1>  
+   
+   
+    <center><h1><i><b>'Online' proqramlar</b></i></h1></center>
+    <center><button id="calculator">Calculator</button></center>
+    <h1><i><b>Calculatorda əməliyyatı 1,2,3,4 və ya vurma bölmə toplama çıxma yazaraq əməliyyatı seçə bilərsiz. Başqa birşey yazsanız bu zman vurma əməldən istifadə edəcək.</b></i></h1>
+    <center><button id="faiz">Faiz hesablama</button></center>
+    <h1><i><b>Siz sadəcə ədədləri yazın. Faizdə isə faiz işarəsini qoya bilərsiz.</b></i></h1>
+    
+    <script>
+        function navigateToUrl(inputId) {
+            const urlInput = document.getElementById(inputId);
+            let url = urlInput.value.trim();
+             function data(){
+                let data = ['chatgpt' == 'https://chatgpt.com/?oai-dm=1',
+                        'google' == 'https://www.google',
+                        'ronaldo' == 'https://www.google.com/search?q=ronaldo&sca_esv=a95d04ccf2083779&sca_upv=1&sxsrf=ADLYWIIs2PZT-VCztLtFUTNVykY2wS9y-w%3A1717873117730&ei=3alkZrGcLOXdxc8Po8_7yAQ&oq=ron&gs_lp=Egxnd3Mtd2l6LXNlcnAiA3JvbioCCAAyEBAAGIAEGLEDGEMYgwEYigUyChAAGIAEGEMYigUyDRAAGIAEGLEDGEMYigUyCBAAGIAEGLEDMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgUQABiABDIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBUjzNlDBAViyJnABeAKQAQOYAZIHoAHKGaoBCTAuMi4xLjYtM7gBAcgBAPgBAZgCBaACuQWoAhPCAgQQABhHwgIHECMYJxjqAsICExAAGIAEGEMYtAIYigUY6gLYAQHCAgsQABiABBixAxiDAZgDF4gGAZAGCLoGBggBEAEYAZIHBTIuMS4yoAfxIw&sclient=gws-wiz-serp',
+                        'aley' == '31'
+             ]
+             }
+             data;
+            if (url) {
+                if (!url.startsWith("http://") && !url.startsWith("https://") && !url.includes(" ")) {
+                    url = "http://" + url;
+                } else if (url.includes(" ")) {
+                    url = "https://www.google.com/search?q=" + encodeURIComponent(url);
+                }
+                window.open(url, '_blank');
+            }
+        }
+
+        document.getElementById('searchButton').addEventListener('click', function() {
+            navigateToUrl('searchInput');
+        });
+
+        document.getElementById('axtar').addEventListener('click', function() {
+            navigateToUrl('axtaris_yeri');
+        });
+
+        // Kalkulyator
+        document.getElementById("calculator").addEventListener("click", function() {
+            let emeliyat = prompt('Zəhmət olmasa əməliyat seçin: 1- vurma 2- bölmə 3- toplama 4- çıxma ');
+            let a = parseFloat(prompt('Zəhmət olmasa birinci ədədi daxil edin: '));
+            let b = parseFloat(prompt('Zəhmət olmasa ikinci ədədi daxil edin: '));
+            let c;
+
+            switch(emeliyat) {
+                case '1':
+                case 'vurma':
+                    c = a * b;
+                    break;
+                case '2':
+                case 'bölmə':
+                    c = a / b;
+                    break;
+                case '3':
+                case 'toplama':
+                    c = a + b;
+                    break;
+                case '4':
+                case 'çıxma':
+                    c = a - b;
+                    break;
+                default:
+                    alert('Zəhmət olmasa 1-4 arasında bir əməliyat yazın və ya vurma bölmə toplama çıxma yazın');
+                    return;
+            }
+
+            alert('Cavab: ' + c);
+        });
+
+        // Faiz Hesablama
+        document.getElementById("faiz").addEventListener("click", function() {
+            var a = parseFloat(prompt('Ədədi daxil edin: '));
+            var b = parseFloat(prompt('Faizi daxil edin: '));
+            var c = a * b / 100;
+            alert('Nəticə: ' + c);
+        });
+
+
+    </script>
+</body>
+</html>
